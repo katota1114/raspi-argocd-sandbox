@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: my-nginx-service
+spec:
+  type: NodePort # ← ラズパイのIP + 特定のポートでアクセスできるようにする設定
+  selector:
+    app: my-nginx
+  ports:
+    - protocol: TCP
+      port: 80         # サービス側のポート
+      targetPort: 80   # コンテナ側のポート
+      nodePort: 30080  # ラズパイのIP:30080 でアクセスできるように固定
