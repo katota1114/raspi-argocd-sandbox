@@ -5,7 +5,7 @@ metadata:
   namespace: default
 spec:
   rules:
-  - host: nginx.local  # ← ここで好きなドメインを決めます
+  - host: rp4-kato.local  # ← ここで好きなドメインを決めます
     http:
       paths:
       - path: /
