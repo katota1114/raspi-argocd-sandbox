@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: my-nginx
 spec:
-  replicas: 1 # ← ここをあとで書き換えて遊びます
+  replicas: 3 # ← ここをあとで書き換えて遊びます
   selector:
     matchLabels:
       app: my-nginx
